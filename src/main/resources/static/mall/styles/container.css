@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab");
+body {
+    background: #120D31;
+    height: 100vh;
+}
+
+.container, .sun, .moon, .orbit, .orbit-1, .orbit-2, .orbit-3, .night, .day, .planet, .planet-1, .planet-1 div, .planet-2, .planet-2 div, .planet-3, .planet-3 div, .planet-container, .planet-1, .planet-2, .planet-3, .orbit-planet-1, .orbit-planet-2, .orbit-planet-3, .stars, .stars div {
+    position: absolute;
+}
+
+.container {
+    margin: auto;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 650px;
+    width: 530px;
+    height: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbit, .orbit-1, .orbit-2, .orbit-3 {
+    background: transparent;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 222222;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 0.5;
+    color: #120D31;
+}
+
+.planet, .planet-1, .planet-1 div, .planet-2, .planet-2 div, .planet-3, .planet-3 div {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun {
+    width: 120px;
+    height: 120px;
+    z-index: 17;
+    background: linear-gradient(270deg, #EAC485 0%, #FFFFFF 100%);
+    border-radius: 100%;
+    box-shadow: 0px 0px 50px #F2CE92;
+    animation: shineStars 10s infinite;
+}
+
+#hour,
+#minute,
+#second {
+    transform-origin: 270px 270px;
+    transition: transform 1s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hour {
+    bottom: 50%;
+}
+
+#minute {
+    bottom: 76%;
+}
+
+.stars div:nth-child(1) {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -492px;
+    bottom: 89px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 7.9s infinite;
+}
+
+.stars div:nth-child(2) {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -484px;
+    bottom: -113px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 15.8s infinite;
+}
+
+.stars div:nth-child(3) {
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -65px;
+    bottom: 513px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 23.7s infinite;
+}
+
+.stars div:nth-child(4) {
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -430px;
+    bottom: 131px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 31.6s infinite;
+}
+
+.stars div:nth-child(5) {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -391px;
+    bottom: 579px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 39.5s infinite;
+}
+
+.stars div:nth-child(6) {
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -452px;
+    bottom: 49px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 47.4s infinite;
+}
+
+.stars div:nth-child(7) {
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 344px;
+    bottom: 297px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 55.3s infinite;
+}
+
+.stars div:nth-child(8) {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -352px;
+    bottom: 492px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 63.2s infinite;
+}
+
+.stars div:nth-child(9) {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -238px;
+    bottom: -121px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 71.1s infinite;
+}
+
+.stars div:nth-child(10) {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -163px;
+    bottom: -66px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 79s infinite;
+}
+
+.stars div:nth-child(11) {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -308px;
+    bottom: 112px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 86.9s infinite;
+}
+
+.stars div:nth-child(12) {
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -237px;
+    bottom: -120px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 94.8s infinite;
+}
+
+.stars div:nth-child(13) {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -61px;
+    bottom: 567px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 102.7s infinite;
+}
+
+.stars div:nth-child(14) {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -170px;
+    bottom: -20px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 110.6s infinite;
+}
+
+.stars div:nth-child(15) {
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -244px;
+    bottom: 292px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 118.5s infinite;
+}
+
+.stars div:nth-child(16) {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -159px;
+    bottom: 19px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 126.4s infinite;
+}
+
+.stars div:nth-child(17) {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 493px;
+    bottom: 443px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 134.3s infinite;
+}
+
+.stars div:nth-child(18) {
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 8px;
+    bottom: 74px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 142.2s infinite;
+}
+
+.stars div:nth-child(19) {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 47px;
+    bottom: 57px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 150.1s infinite;
+}
+
+.stars div:nth-child(20) {
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: -465px;
+    bottom: 588px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 158s infinite;
+}
+
+.stars div:nth-child(21) {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 156px;
+    bottom: -126px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 165.9s infinite;
+}
+
+.stars div:nth-child(22) {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 32px;
+    bottom: -294px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 173.8s infinite;
+}
+
+.stars div:nth-child(23) {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 394px;
+    bottom: -275px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 181.7s infinite;
+}
+
+.stars div:nth-child(24) {
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 97px;
+    bottom: 449px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 189.6s infinite;
+}
+
+.stars div:nth-child(25) {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #BCBCBC;
+    left: 446px;
+    bottom: 682px;
+    z-index: -3;
+    margin: 30px;
+    animation: starsOpacity 197.5s infinite;
+}
+
+.planet-1 {
+    z-index: 10;
+}
+.planet-1 div {
+    background: linear-gradient(269.7deg, #EBC88D 0.26%, #FFB444 99.74%);
+    z-index: 16;
+}
+
+.planet-2 {
+    z-index: 4;
+}
+.planet-2 div {
+    background: linear-gradient(269.7deg, #FA765F 0.26%, #FFB444 99.74%);
+    z-index: 8;
+}
+
+.planet-3 {
+    z-index: -2;
+}
+.planet-3 div {
+    background: linear-gradient(269.7deg, #FA765F 0.26%, #FF4644 99.74%);
+    z-index: 5.3333333333;
+}
+
+.orbit-1 {
+    width: 280px;
+    height: 280px;
+}
+
+.orbit-2 {
+    width: 410px;
+    height: 410px;
+}
+
+.orbit-3 {
+    width: 540px;
+    height: 540px;
+}
+
+.planet-1 .orbit-planet-1 {
+    opacity: 1;
+    border-radius: 100%;
+    width: 27px;
+    height: 27px;
+}
+.planet-1 .orbit-planet-2 {
+    opacity: 0.5;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+}
+.planet-1 .orbit-planet-3 {
+    opacity: 0.3333333333;
+    border-radius: 100%;
+    width: 63px;
+    height: 63px;
+}
+
+.planet-2 .orbit-planet-1 {
+    opacity: 1;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+}
+.planet-2 .orbit-planet-2 {
+    opacity: 0.5;
+    border-radius: 100%;
+    width: 54px;
+    height: 54px;
+}
+.planet-2 .orbit-planet-3 {
+    opacity: 0.3333333333;
+    border-radius: 100%;
+    width: 72px;
+    height: 72px;
+}
+
+.planet-3 .orbit-planet-1 {
+    opacity: 1;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+}
+.planet-3 .orbit-planet-2 {
+    opacity: 0.5;
+    border-radius: 100%;
+    width: 63px;
+    height: 63px;
+}
+.planet-3 .orbit-planet-3 {
+    opacity: 0.3333333333;
+    border-radius: 100%;
+    width: 81px;
+    height: 81px;
+}
+
+.orbit-1 {
+    background: #40193E;
+    z-index: 16;
+}
+
+.orbit-2 {
+    background: #30133F;
+    z-index: 8;
+}
+
+.orbit-3 {
+    background: #21103A;
+    z-index: 5.3333333333;
+}
+
+.animation {
+    animation: rotate180deg 2s infinite;
+}
+
+@keyframes rotate180deg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate180degBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes shineStars {
+    0% {
+        box-shadow: 0px 0px 50px #F2CE92;
+    }
+    50% {
+        box-shadow: 0px 0px 150px #ffffff;
+    }
+}
+@keyframes starsOpacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}

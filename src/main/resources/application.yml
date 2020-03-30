@@ -1,0 +1,3 @@
+resources: # 指定静态资源的路径
+  static-locations: classpath:/static/
+  cache-period: 0
